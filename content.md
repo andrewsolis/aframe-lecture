@@ -1,10 +1,11 @@
-<!-- .slide: data-background="media/img/aframe.jpg" -->
+<!-- .slide: data-background="media/img/TACC.jpeg" -->
 
 <div class="talk-title">
   <h1>A-Frame</h1>
   <p>A web framework for building VR experiences</p>
   <p class="talk-info">
-    @andgokevin | Mozilla VR | **aframe.io**
+    Brian McCann Ph.D. | Texas Advanced Computing Center
+    Andrew Solis | Texas Advanced Computing Center
   </p>
 </div>
 
@@ -20,8 +21,9 @@
 
 <!-- NOTES -->
 - Ask how many have tried VR.
-- Virtual reality is a technology platform that transports you to realistic, interactive, immersive 3D environments
-- It's the next platform, will change how we work + play + communicate digitally, face of society
+- Virtual reality is a technology platform that transports you to realistic, interactive, immersive 3D environments 
+- users can interact both with the environment and content 
+- a growing platform that has the ability to change how we work + play + communicate digitally, face of society
 
 ---
 

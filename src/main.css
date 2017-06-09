@@ -413,7 +413,7 @@ body:not(.aframe-inspector-opened) .toggle-edit {
 .talk-info {
   font-weight: 200;
   position: relative;
-  top: 230px;
+  top: 160px;
 }
 
 div.slide__boilerplate {
