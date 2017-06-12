@@ -122,6 +122,12 @@ sensors
 https://w3c.github.io/webvr/
 
 <!-- NOTES -->
+
+WebGL: 
+- A JavaScript API for rendering interactive 3D and 2D graphics
+  within any compatible web browser
+
+
 API:
 - Optimized rendering path to headsets
 - Access position and rotation (pose) data
@@ -129,7 +135,6 @@ API:
 History:
 - Initial WebVR API by Mozilla
 - Working W3C community group
-- Mozilla, Google, Samsung, Microsoft, community currently iterating WebVR 1.0 API
 
 Not just a specification, it's implemented...
 
@@ -172,6 +177,8 @@ https://webvr.rocks
 </div>
 
 <!-- NOTES -->
+
+- Mozilla, Google, Samsung, Microsoft, community currently iterating WebVR 1.0 API
 - Firefox + Chrome WebVR 1.0 hits release channels by early 2017
 - Currently behind Nightly, custom builds, and flags
 - Mobile Polyfill: use device motion / orientation sensors to polyfill on smartphones
@@ -184,11 +191,13 @@ https://webvr.rocks
 <!-- .slide: data-background="media/img/metaverse.jpg" -->
 
 <!-- NOTES -->
-- Shared persistent collective virtual spaces
-- Alternate digital reality that the world may live, work, play
-- Must be decentralized/open/connected, the Web is best platform to fully realize
+- Metaverse: a shared virtual-reality space where users can interact
+  with the virtual envrionment and other users
+- Requiring decentralized/open/connected space, the Web is best platform to fully realize
 - Where do we begin?
-- three.js abstracts WebGL, 3D, and WebVR, but could still make it more accessible
+- You could use native WebGL, but let's see what that requires...
+
+---
 
 ---
 
