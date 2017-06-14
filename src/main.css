@@ -370,6 +370,15 @@ html:-moz-full-screen-ancestor {
   margin-bottom: 30px !important;
 }
 
+.row-content {
+  align-items: center;
+  display: flex;
+}
+
+.row-content div {
+  flex: 1;  
+}
+
 .captioned-image-row.small img {
   max-height: 128px !important;
   max-width: 128px !important;
@@ -442,6 +451,10 @@ div.slide__boilerplate p {
 div.slide__boilerplate + video {
   opacity: 0.5;
   z-index: 0;
+}
+
+div.code-block {
+  font-size: 0.5em;
 }
 
 .reveal li {
