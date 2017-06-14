@@ -525,7 +525,7 @@ https://webvr.rocks
 A web framework for building virtual reality experiences
 
 <!-- NOTES -->
-- Launched last December
+- Launched in December 2015
 - Why:
   - Easy for web developers to create VR content, without graphics knowledge
   - Prototype and experiment WebVR and VR UX faster
@@ -652,8 +652,8 @@ A web framework for building virtual reality experiences
 - Popular in game development, used by Unity
 - All objects in scene are **entities** that inherently empty objects. Plug in
   **components** to attach appearance / behavior / functionality
-- 2D web where every element was fixed
-- 3D/VR is different, objects of infinite types and complexities, need an easy way to build up different kinds of objects
+- 2D web, elements laid out have fixed behavior
+- 3D/VR objects of infinite types and complexities, need an easy way to build up different kinds of objects
 
 ---
 
@@ -719,6 +719,9 @@ A web framework for building virtual reality experiences
 ```
 <!-- .element: class="stretch" -->
 
+<!-- NOTES -->
+What if I wanted to load a model from a file?
+
 ---
 
 ## Composing an Entity
@@ -734,6 +737,8 @@ A web framework for building virtual reality experiences
 ```
 <!-- .element: class="stretch" -->
 
+<!-- NOTES -->
+What about having my object say explode?
 ---
 
 ## Composing an Entity
@@ -818,59 +823,11 @@ https://aframe.io/blog/
 
 ---
 
-<!-- .slide: data-background="media/img/apainter.gif" -->
-
-# Art - *A-Painter*
-
-@mozillavr
-
----
-
-<!-- .slide: data-background="media/img/syria.gif" -->
-
-# Journalism - *Fear of the Sky*
-
-Amnesty International UK
-
----
-
-<!-- .slide: data-background="media/img/mars.jpg" -->
-
-# Journalism - *Journey to Mars*
-
-The Washington Post
-
----
-
-<!-- .slide: data-background="media/img/citybuilder.gif" -->
-
-# Sandbox - *City Builder*
-
-@kfarr
-
----
-
 <!-- .slide: data-background="media/img/adit.gif" -->
 
 # Data Visualization - *Adit*
 
 @datatitian
-
----
-
-<!-- .slide: data-background="media/img/a-blast.gif" -->
-
-# Gaming - *A-Blast*
-
-@mozillavr
-
----
-
-<!-- .slide: data-background="media/img/ux.gif" -->
-
-# Prototyping - *UI Widgets*
-
-@whoyee
 
 ---
 
@@ -882,35 +839,35 @@ The Washington Post
 
 ---
 
-<!-- .slide: data-background="media/img/ar.gif" -->
-
-# AR - *AR.js + A-Frame*
-
-@jerome_etienne
-
----
-
-<!-- .slide: data-background="media/img/webvrstudio.png" -->
-
-# Tools - *WebVR Studio*
-
-@webvrstudio
-
----
-
-<!-- .slide: data-background-video="media/video/livetour.mp4" data-background-video-loop="true" -->
-
-# Real Estate - *Live Tour*
-
-iStaging
-
----
-
 <!-- .slide: data-background="media/img/cadavr.gif" -->
 
 # Education - *CadaVR*
 
 @drryanjames
+
+---
+
+<!-- .slide: data-background="media/img/apainter.gif" -->
+
+# Art - *A-Painter*
+
+@mozillavr
+
+---
+
+<!-- .slide: data-background="media/img/mars.jpg" -->
+
+# Journalism - *Journey to Mars*
+
+The Washington Post
+
+---
+
+<!-- .slide: data-background="media/img/ar.gif" -->
+
+# AR - *AR.js + A-Frame*
+
+@jerome_etienne
 
 ---
 
