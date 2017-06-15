@@ -2,7 +2,7 @@
 
 <div class="talk-title">
   <h1>A-Frame</h1>
-  <p>A web framework for building VR experiences</p>
+  <p>A web framework for building VR experiences<sup class="reference">[1][2]</sup></p>
   <p class="talk-info">
     Brian McCann Ph.D. | Texas Advanced Computing Center
     Andrew Solis | Texas Advanced Computing Center
@@ -12,6 +12,7 @@
 <!-- NOTES -->
 - Onboard web developers into the 3D and VR world with easy-to-use tools
 - Prototype WebVR experiences faster
+- Slides taken from aframe, if you like to see original slides
 
 ------
 
@@ -21,7 +22,7 @@
 
 <!-- NOTES -->
 - Ask how many have tried VR.
-- Virtual reality is a technology platform that transports you to realistic, interactive, immersive 3D environments 
+- Virtual reality is a technology platform that transports you to realistic, immersive 3D environments 
 - users can interact both with the environment and content 
 - a growing platform that has the ability to change how we work + play + communicate digitally, face of society
 
@@ -67,8 +68,8 @@
 <!-- NOTES -->
 - App stores and corporations control distribution: can take down or block content
 - Downloads / installs are a barrier to consumption: small business pages
-- Closed ecosystem: proprietary engines, steep learning curves, siloed experiences, fragmentation
-- We want VR to be successful, so we want a platform without these points of friction. The answer is WebVR...
+- Closed ecosystem: proprietary engines, steep learning curves, isolated experiences, fragmentation
+- We want VR to be successful, so we want a platform without these points of friction. 
 
 ------
 
@@ -104,14 +105,17 @@ Connected:
 Instant:
 - Click a link on Twitter or Weibo, immediate VR experiences
 - No installs
-- Imagine for long tail experiences: shopping & personal spaces
-- Great for long tail bite-sized experiences
+---
 
-Transition:
-- Web has advantages that make it the best platform for the people
-- Need to act to make it reality, can't wait for VR to bake and crystallize
-- Get involved
+##Goals <sup class="reference">[3]</sup>
 
+* Detect available Virtual Reality devices
+* Query the devices capabilities
+* Poll the device’s position and orientation
+* Display imagery on the device at the appropriate frame rate
+
+<!-- NOTES -->
+- How does WebVR work??
 ---
 
 <img class="stretch" data-src="media/img/webvr.png">
@@ -182,7 +186,7 @@ https://webvr.rocks
 - Firefox + Chrome WebVR 1.0 hits release channels by early 2017
 - Currently behind Nightly, custom builds, and flags
 - Mobile Polyfill: use device motion / orientation sensors to polyfill on smartphones
-- With all the browsers behind it...
+- What is the end goal...
 
 ---
 
@@ -195,10 +199,33 @@ https://webvr.rocks
   with the virtual envrionment and other users
 - Requiring decentralized/open/connected space, the Web is best platform to fully realize
 - Where do we begin?
+
+---
+## (Possible) Solutions
+
+<div class="captioned-image-row medium">
+  <div>
+    <img data-src="media/img/WebGL_Logo.png">
+  </div>
+  <div>
+    <img data-src="media/img/threejs-logo.png">
+  </div>
+    <div>
+    <img data-src="media/img/unity.png">
+  </div>
+</div>
+
+<!-- NOTES -->
+- WebGL: A JavaScript API for rendering interactive 3D and 2D graphics
+  within any compatible web browser
+- three.js: A JavaScript API to create and display 3D computer graphics, that
+            is built on top of WebGL
+- Unity: Cross-platform gane engine primarily aimed for video games and simulations
+
 - You could use native WebGL, but let's see what that requires...
 
 ---
-## Creating a rotating cube in WebGL
+## Creating a rotating cube in WebGL<sup class="reference">[4]</sup>
 <div class="row-content">
   <div>
     <video data-autoplay loop src="media/video/rotating_cube_webgl.mov"></video>
@@ -893,3 +920,15 @@ The Washington Post
 - Most work done on GitHub
 - Active community on Slack to share projects, interact, hang out, seek help
 - Featured projects on the `awesome-aframe` repository and *A Week of A-Frame* blog
+
+------
+
+#References
+
+1. Ngo, Kevin, and Marcos Diego. "A-Frame Presentation" _aframe.io_ Mozilla Corporation. n.d. Web. 15 June 2017. <https://aframe.io/aframe-presentation-kit/#/>.
+
+2. Vaughn, Matthew, Ph.D. "A-frame Presentation." _Heroku_. TACC, n.d. Web. 15 June 2017. <http://cshl-aframe.kybernet.es/index.html#/>.
+
+3. Jones, Brandon. "WebVR Explained". _Github_ W3C. n.d. Web. 15 June 2017. <https://github.com/w3c/webvr/blob/master/explainer.md>.
+
+4. Tutorialspoint.com "WebGl Cube Rotation." _Tutorialspoint_ N.p., n.d. Web. 15 June 2017. <https://www.tutorialspoint.com/webgl/webgl_cube_rotation.htm>.

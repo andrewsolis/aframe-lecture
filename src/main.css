@@ -348,7 +348,7 @@ html:-moz-full-screen-ancestor {
 }
 
 .reveal section ul {
-  list-style: square;
+  list-style: disc;
   margin-left: 0;
 }
 
@@ -453,10 +453,6 @@ div.slide__boilerplate + video {
   z-index: 0;
 }
 
-div.code-block {
-  font-size: 0.5em;
-}
-
 .reveal li {
   margin: 30px 0;
 }
@@ -479,4 +475,20 @@ div.code-block {
 .aframe-inspector-opened .slides {
   margin: 0 !important;
   zoom: 1 !important;
+}
+
+/*********************************************
+ * CUSTOM STYLES
+ *********************************************/
+ div.code-block {
+  font-size: 0.5em;
+}
+
+.captioned-image-row.medium img {
+  max-height: 256px !important;
+  max-width: 256px !important;
+}
+
+sup.reference {
+  font-size: 50%
 }
