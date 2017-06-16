@@ -957,11 +957,113 @@ The Washington Post
 - Featured projects on the `awesome-aframe` repository and *A Week of A-Frame* blog
 
 ------
+<!-- .slide: data-background="media/img/TACC.jpeg" -->
+#Hand's on Tutorial<sup class="reference">[2][6][7]</sup>
+
+<!-- NOTES -->
+- Hand's on Built on to of other presentations
+- First going to give a brief overview of basic web languages (HTML, CSS, Javascript)
+------
+## HTML <sup class="reference">[8]</sup>
+
+**H**yper**T**ext **M**arkup **Language**
+
+* It is <span class="color-red">NOT</span> a programming language; it <span class="color-green">IS</span> a _markup language_
+* Tells the browser how to structure the webpage
+
+<!-- NOTES -->
+* Follows the same paradigm as XML, however XML describes objects, whereas HTML describes the pages layout
+* Uses tags to enclose, wrap, or mark up parts of the content to appear in a certain way
+---
+
+<div>
+  <div><img data-src="media/img/anatomy-of-an-html-element.png"><sup class="reference">[9]</sup></div>
+</div>
+
+<!-- NOTES -->
+* Opening Tag: name of the element and where the element begins
+* Closing Tag: where the element ends
+* Content: Content of the element ( in this example text )
+* element: Opening tag, Closing Tag, content
+
+---
+
+## Nesting Elements
+
+<pre class="code-good"> <code class="html code-good"><p> It's a great <strong>big</strong> world </p>
+</code> </pre>
+
+<pre class="code-bad"> <code class="html code-bad"><p>It's a great <strong>big world</p></strong>
+</code></pre>
+
+<!-- NOTES -->
+ - Putting elements inside of other elements by including tags
+ - Make sure tags open and close correctly. Close the most recent tag and so on...
+---
+
+## Attributes
+
+<div>
+  <img data-src="media/img/grumpy-cat-attribute.png"><sup class="reference">[10]</sup>
+</div>
+
+* contain information about element you do not want to appear in the actual content
+
+<!-- NOTES -->
+* All attributes should have a space between it and the element name or previous attribute
+* It is the attribute name followed by an equals sign
+* An attribute vale with opening and closing quotes (single or double)
+
+---
+
+## Hello World HTML
+<div class="row-content">
+  <div class="code-block">
+  ```html
+  <!DOCTYPE html>
+      <html>
+        <head>
+          <meta charset="utf-8">
+          <title>My test page 1</title>
+        </head>
+        <body>
+          <p>This is my page</p>
+        </body>
+      </html>
+  ```
+  </div>
+  <div>
+    <iframe id="helloworld" src="http://andrewsolis.github.io/">
+      
+    </iframe>
+  </div>
+</div>
+<div>
+
+<!-- NOTES -->
+* html: html element
+* head: container for references to other html, css, and javascript
+* meta: character set for document to follow
+* title: title of webpage in browser
+* body: contains all the content you want to render to the web 
+
+---
+
+##Hello, WebVR
+
+> A-Frame provides easy-to-use HTML elements for starters called
+[primitives](https://aframe.io/docs/0.5.0/primitives/). In the sections below,
+we'll modify basic meshes through HTML attributes (e.g., change colors,
+positions, rotations, scale) and get a feel for the workflow.
+
+<img data-src="media/img/hellowebvr2.jpg">
+
+<img class="stretch" data-src="media/img/hellowebvr.jpg">
+------
 
 #References
-<div id="references">
+<div class="references">
   <ol>
-
     <li>
       Ngo, Kevin, and Marcos Diego. "A-Frame Presentation" _aframe.io_ Mozilla Corporation. n.d. Web. 15 June 2017. <https://aframe.io/aframe-presentation-kit/#/>.
     </li>
@@ -977,7 +1079,30 @@ The Washington Post
     <li>
       Petitcolas, Jonathan. "Create a Rotating Cube in WebGL with Three.js." _jonathan-petitcolas_ N.p., n.d. Web. 16 June 2017. <https://www.jonathan-petitcolas.com/2013/04/02/create-rotating-cube-in-webgl-with-threejs.html>.
     </li>
+    <li>
+      Ngo, Kevin, and Po-chiang Chao. "An Interactive Course for WebVR." _aframe.io_ Mozilla Corporation, n.d. Web. 16 June 2017. <https://aframe.io/aframe-school/#/>.
+    </li>
+    <li>
+    "A-frame Documentation." _aframe.io_ Mozilla Corporation, n.d. Web. 16 June 2017. <https://aframe.io/docs/0.5.0/introduction/>.
+    </li>
+    <li>
+    "Getting Started with HTML." _developer.mozilla.org_ Mozilla Corporation, n.d. Web. 16 June 2017. <https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started>.
+    </li>
+    <li>
+      Anatomy-of-an-html-element. Digital image. _mdn.mozillademos.org_ Mozilla Corporation, n.d. Web. 16 June 2017. <https://mdn.mozillademos.org/files/7659/anatomy-of-an-html-element.png>.
+    </li>
 
   </ol>
-
+</div>
+---
+#References (continued)
+<div class="references">
+  <ol start="9">
+    <li>
+      Anatomy-of-an-html-element. Digital image. _mdn.mozillademos.org_ Mozilla Corporation, n.d. Web. 16 June 2017. <https://mdn.mozillademos.org/files/7659/anatomy-of-an-html-element.png>.
+    </li>
+    <li>
+      Grumpy-cat-small. Digital image. _mdn.mozillademos.org_ Mozilla Corporation, n.d. Web. 16 June 2017. <https://mdn.mozillademos.org/files/9347/grumpy-cat-small.png>
+    </li>
+  </ol>
 </div>

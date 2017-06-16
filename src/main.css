@@ -84,7 +84,8 @@ html:-moz-full-screen-ancestor {
 .reveal video,
 .reveal iframe {
   max-width: 95%;
-  max-height: 95%; }
+  max-height: 95%; 
+;}
 
 .reveal strong,
 .reveal b {
@@ -136,6 +137,7 @@ html:-moz-full-screen-ancestor {
   margin: 20px auto;
   padding: 5px;
   font-style: italic;
+  font-size: 50%;
   background: rgba(255, 255, 255, 0.05);
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2); }
 
@@ -498,6 +500,26 @@ sup.reference {
   font-size: 50%
 }
 
-div#references {
+div.references {
   font-size: 50%;
+}
+
+.color-red {
+  color: red;
+}
+
+.color-green {
+  color: green;
+}
+
+pre code.code-good {
+  border-left: 5px solid green;
+}
+
+pre code.code-bad {
+  border-left:  5px solid red;
+}
+
+.reveal iframe#helloworld {
+    border: 5px solid cornflowerblue;
 }
