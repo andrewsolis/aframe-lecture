@@ -484,6 +484,11 @@ div.slide__boilerplate + video {
   font-size: 0.5em;
 }
 
+div.img-small img{
+  max-height: 128px;
+  max-width: 128px;
+}
+
 .captioned-image-row.medium img {
   max-height: 256px !important;
   max-width: 256px !important;
@@ -491,4 +496,8 @@ div.slide__boilerplate + video {
 
 sup.reference {
   font-size: 50%
+}
+
+div#references {
+  font-size: 50%;
 }
