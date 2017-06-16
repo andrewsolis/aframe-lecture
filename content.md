@@ -217,10 +217,10 @@ https://webvr.rocks
 
 <!-- NOTES -->
 - WebGL: A JavaScript API for rendering interactive 3D and 2D graphics
-  within any compatible web browser
+  within any compatible web browser 
 - three.js: A JavaScript API to create and display 3D computer graphics, that
-            is built on top of WebGL
-- Unity: Cross-platform gane engine primarily aimed for video games and simulations
+  is built on top of WebGL
+- Unity: Cross-platform game engine primarily aimed for video games and simulations
 
 - You could use native WebGL, but let's see what that requires...
 
@@ -442,7 +442,7 @@ https://webvr.rocks
 - What about Three.JS?
 ---
 
-## Creating a rotating cube in Three.JS
+## Creating a rotating cube in Three.JS<sup class="reference">[5]</sup>
 <div class="row-content">
   <div>
     <video data-autoplay loop src="media/video/rotating_cube_threejs.mov"></video>
@@ -517,7 +517,6 @@ https://webvr.rocks
 <!-- NOTES -->
 - Easier to understand, but still a bit heavy
 - Still need to setup scene before setting up content
-- Haven't added virtual reality support yet to either solution
 ---
 
 <!-- .slide: data-background-video="media/video/boilerplate.mp4" data-state="state--bg-dark" data-background-video-loop="true"-->
@@ -765,7 +764,7 @@ What if I wanted to load a model from a file?
 <!-- .element: class="stretch" -->
 
 <!-- NOTES -->
-What about having my object say explode?
+What about having my object perform some action?
 ---
 
 ## Composing an Entity
@@ -781,6 +780,42 @@ What about having my object say explode?
   explode="on: hit">
 ```
 <!-- .element: class="stretch" -->
+
+<!-- NOTES -->
+How could I write my own component?
+
+---
+## Writing a Component
+
+<!-- .slide: data-background="media/img/minecraft-blocks.png" data-transition="none" -->
+
+```js
+AFRAME.registerComponent('my-component', {
+  schema: {
+    foo: {type: 'selector'},
+    bar: {default: 256}
+  },
+
+  init: function () { // ... },
+  update: function () { // ... },
+  remove: function () { // ... },
+  tick: function () { // ... }
+});
+```
+<!-- .element: class="stretch" -->
+
+```html
+<a-box my-component="foo: #box; bar: 300""></a-box>
+```
+
+<!-- NOTES -->
+- 'my-component': name of attribute to use to attach to a-frame entity 
+- `schema`: defines how data is parsed from HTML
+- Lifecycle methods:
+  - `init`: component attached, like `componentDidMount`
+  - `update`: component data update, like `componentWillReceiveProps`
+  - `remove`: component detached, like `componentWillUnmount`
+  - `tick`: run on every frame
 
 ---
 
@@ -924,11 +959,25 @@ The Washington Post
 ------
 
 #References
+<div id="references">
+  <ol>
 
-1. Ngo, Kevin, and Marcos Diego. "A-Frame Presentation" _aframe.io_ Mozilla Corporation. n.d. Web. 15 June 2017. <https://aframe.io/aframe-presentation-kit/#/>.
+    <li>
+      Ngo, Kevin, and Marcos Diego. "A-Frame Presentation" _aframe.io_ Mozilla Corporation. n.d. Web. 15 June 2017. <https://aframe.io/aframe-presentation-kit/#/>.
+    </li>
+    <li>
+      Vaughn, Matthew, Ph.D. "A-frame Presentation." _Heroku_. TACC, n.d. Web. 15 June 2017. <http://cshl-aframe.kybernet.es/index.html#/>.
+    </li>
+    <li>
+      Jones, Brandon. "WebVR Explained". _Github_ W3C. n.d. Web. 15 June 2017. <https://github.com/w3c/webvr/blob/master/explainer.md>.
+    </li>
+    <li>
+      Tutorialspoint.com "WebGl Cube Rotation." _Tutorialspoint_ N.p., n.d. Web. 15 June 2017. <https://www.tutorialspoint.com/webgl/webgl_cube_rotation.htm>.
+    </li>
+    <li>
+      Petitcolas, Jonathan. "Create a Rotating Cube in WebGL with Three.js." _jonathan-petitcolas_ N.p., n.d. Web. 16 June 2017. <https://www.jonathan-petitcolas.com/2013/04/02/create-rotating-cube-in-webgl-with-threejs.html>.
+    </li>
 
-2. Vaughn, Matthew, Ph.D. "A-frame Presentation." _Heroku_. TACC, n.d. Web. 15 June 2017. <http://cshl-aframe.kybernet.es/index.html#/>.
+  </ol>
 
-3. Jones, Brandon. "WebVR Explained". _Github_ W3C. n.d. Web. 15 June 2017. <https://github.com/w3c/webvr/blob/master/explainer.md>.
-
-4. Tutorialspoint.com "WebGl Cube Rotation." _Tutorialspoint_ N.p., n.d. Web. 15 June 2017. <https://www.tutorialspoint.com/webgl/webgl_cube_rotation.htm>.
+</div>
