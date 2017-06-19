@@ -982,10 +982,6 @@ The Washington Post
     <li>
     "A-frame Documentation." _aframe.io_ Mozilla Corporation, n.d. Web. 16 June 2017. <https://aframe.io/docs/0.5.0/introduction/>.
     </li>
-    <li>
-    "Getting Started with HTML." _developer.mozilla.org_ Mozilla Corporation, n.d. Web. 16 June 2017. <https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started>.
-    </li>
-
   </ol>
 </div>
 ---
@@ -993,7 +989,7 @@ The Washington Post
 <div class="references">
   <ol start="8">
     <li>
-      Anatomy-of-an-html-element. Digital image. _mdn.mozillademos.org_ Mozilla Corporation, n.d. Web. 16 June 2017. <https://mdn.mozillademos.org/files/7659/anatomy-of-an-html-element.png>.
+    "Getting Started with HTML." _developer.mozilla.org_ Mozilla Corporation, n.d. Web. 16 June 2017. <https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started>.
     </li>
     <li>
       Anatomy-of-an-html-element. Digital image. _mdn.mozillademos.org_ Mozilla Corporation, n.d. Web. 16 June 2017. <https://mdn.mozillademos.org/files/7659/anatomy-of-an-html-element.png>.
