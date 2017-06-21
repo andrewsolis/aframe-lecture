@@ -5,6 +5,7 @@
   <p>A web framework for building VR experiences<sup class="reference">[1][2]</sup></p>
   <p class="talk-info">
     Andrew Solis | Texas Advanced Computing Center
+	<br/>
     Brian McCann Ph.D. | Texas Advanced Computing Center
   </p>
 </div>
