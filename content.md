@@ -4,8 +4,8 @@
   <h1>A-Frame</h1>
   <p>A web framework for building VR experiences<sup class="reference">[1][2]</sup></p>
   <p class="talk-info">
-    Brian McCann Ph.D. | Texas Advanced Computing Center
     Andrew Solis | Texas Advanced Computing Center
+    Brian McCann Ph.D. | Texas Advanced Computing Center
   </p>
 </div>
 
