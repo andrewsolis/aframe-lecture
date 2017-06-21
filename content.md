@@ -22,8 +22,8 @@
 
 <!-- NOTES -->
 - Ask how many have tried VR.
-- Virtual reality is a technology platform that transports you to realistic, immersive 3D environments 
-- users can interact both with the environment and content 
+- Virtual reality is a technology platform that transports you to realistic, immersive 3D environments
+- users can interact both with the environment and content
 - a growing platform that has the ability to change how we work + play + communicate digitally, face of society
 
 ---
@@ -69,7 +69,7 @@
 - App stores and corporations control distribution: can take down or block content
 - Downloads / installs are a barrier to consumption: small business pages
 - Closed ecosystem: proprietary engines, steep learning curves, isolated experiences, fragmentation
-- We want VR to be successful, so we want a platform without these points of friction. 
+- We want VR to be successful, so we want a platform without these points of friction.
 
 ------
 
@@ -125,9 +125,11 @@ sensors
 
 https://w3c.github.io/webvr/
 
+> **API** : A set of routines, protocols, and tools for building software applications
+
 <!-- NOTES -->
 
-WebGL: 
+WebGL:
 - A JavaScript API for rendering interactive 3D and 2D graphics
   within any compatible web browser
 
@@ -217,7 +219,7 @@ https://webvr.rocks
 
 <!-- NOTES -->
 - WebGL: A JavaScript API for rendering interactive 3D and 2D graphics
-  within any compatible web browser 
+  within any compatible web browser
 - three.js: A JavaScript API to create and display 3D computer graphics, that
   is built on top of WebGL
 - Unity: Cross-platform game engine primarily aimed for video games and simulations
@@ -242,7 +244,7 @@ https://webvr.rocks
            /*============= Creating a canvas =================*/
            var canvas = document.getElementById('my_Canvas');
            gl = canvas.getContext('experimental-webgl');
-           
+
            /*============ Defining and storing the geometry =========*/
 
            var vertices = [
@@ -251,7 +253,7 @@ https://webvr.rocks
               -1,-1,-1, -1, 1,-1, -1, 1, 1, -1,-1, 1,
               1,-1,-1, 1, 1,-1, 1, 1, 1, 1,-1, 1,
               -1,-1,-1, -1,-1, 1, 1,-1, 1, 1,-1,-1,
-              -1, 1,-1, -1, 1, 1, 1, 1, 1, 1, 1,-1, 
+              -1, 1,-1, -1, 1, 1, 1, 1, 1, 1, 1,-1,
            ];
 
            var colors = [
@@ -266,7 +268,7 @@ https://webvr.rocks
            var indices = [
               0,1,2, 0,2,3, 4,5,6, 4,6,7,
               8,9,10, 8,10,11, 12,13,14, 12,14,15,
-              16,17,18, 16,18,19, 20,21,22, 20,22,23 
+              16,17,18, 16,18,19, 20,21,22, 20,22,23
            ];
 
            // Create and store data into vertex buffer
@@ -283,16 +285,16 @@ https://webvr.rocks
            var index_buffer = gl.createBuffer ();
            gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, index_buffer);
            gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, new Uint16Array(indices), gl.STATIC_DRAW);
-                                                
+
            /*=================== Shaders =========================*/
-           
+
            var vertCode = 'attribute vec3 position;'+
               'uniform mat4 Pmatrix;'+
               'uniform mat4 Vmatrix;'+
               'uniform mat4 Mmatrix;'+
               'attribute vec3 color;'+//the color of the point
               'varying vec3 vColor;'+
-        
+
               'void main(void) { '+//pre-built function
                  'gl_Position = Pmatrix*Vmatrix*Mmatrix*vec4(position, 1.);'+
                  'vColor = color;'+
@@ -303,7 +305,7 @@ https://webvr.rocks
               'void main(void) {'+
                  'gl_FragColor = vec4(vColor, 1.);'+
               '}';
-           
+
            var vertShader = gl.createShader(gl.VERTEX_SHADER);
            gl.shaderSource(vertShader, vertCode);
            gl.compileShader(vertShader);
@@ -325,13 +327,13 @@ https://webvr.rocks
            gl.bindBuffer(gl.ARRAY_BUFFER, vertex_buffer);
            var position = gl.getAttribLocation(shaderProgram, "position");
            gl.vertexAttribPointer(position, 3, gl.FLOAT, false,0,0) ;
-           
+
            // Position
            gl.enableVertexAttribArray(position);
            gl.bindBuffer(gl.ARRAY_BUFFER, color_buffer);
            var color = gl.getAttribLocation(shaderProgram, "color");
            gl.vertexAttribPointer(color, 3, gl.FLOAT, false,0,0) ;
-           
+
            // Color
            gl.enableVertexAttribArray(color);
            gl.useProgram(shaderProgram);
@@ -344,10 +346,10 @@ https://webvr.rocks
                  0.5/ang, 0 , 0, 0,
                  0, 0.5*a/ang, 0, 0,
                  0, 0, -(zMax+zMin)/(zMax-zMin), -1,
-                 0, 0, (-2*zMax*zMin)/(zMax-zMin), 0 
+                 0, 0, (-2*zMax*zMin)/(zMax-zMin), 0
               ];
            }
-        
+
            var proj_matrix = get_projection(40, canvas.width/canvas.height, 1, 100);
 
            var mov_matrix = [1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0,0,1];
@@ -362,7 +364,7 @@ https://webvr.rocks
               var c = Math.cos(angle);
               var s = Math.sin(angle);
               var mv0 = m[0], mv4 = m[4], mv8 = m[8];
-          
+
               m[0] = c*m[0]-s*m[1];
               m[4] = c*m[4]-s*m[5];
               m[8] = c*m[8]-s*m[9];
@@ -376,7 +378,7 @@ https://webvr.rocks
               var c = Math.cos(angle);
               var s = Math.sin(angle);
               var mv1 = m[1], mv5 = m[5], mv9 = m[9];
-          
+
               m[1] = m[1]*c-m[2]*s;
               m[5] = m[5]*c-m[6]*s;
               m[9] = m[9]*c-m[10]*s;
@@ -390,7 +392,7 @@ https://webvr.rocks
               var c = Math.cos(angle);
               var s = Math.sin(angle);
               var mv0 = m[0], mv4 = m[4], mv8 = m[8];
-          
+
               m[0] = c*m[0]+s*m[2];
               m[4] = c*m[4]+s*m[6];
               m[8] = c*m[8]+s*m[10];
@@ -402,7 +404,7 @@ https://webvr.rocks
 
            /*================= Drawing ===========================*/
            var time_old = 0;
-        
+
            var animate = function(time) {
 
               var dt = time-time_old;
@@ -423,11 +425,11 @@ https://webvr.rocks
               gl.uniformMatrix4fv(Mmatrix, false, mov_matrix);
               gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, index_buffer);
               gl.drawElements(gl.TRIANGLES, indices.length, gl.UNSIGNED_SHORT, 0);
-          
+
               window.requestAnimationFrame(animate);
            }
            animate(0);
-        
+
         </script>
 
      </body>
@@ -458,7 +460,7 @@ https://webvr.rocks
           <div id="container"></div>
           <script src="js/three.min.js"></script>
           <script type="text/javascript">
-            
+
             var scene, camera, renderer;
 
             var WIDTH  = window.innerWidth;
@@ -809,7 +811,7 @@ AFRAME.registerComponent('my-component', {
 ```
 
 <!-- NOTES -->
-- 'my-component': name of attribute to use to attach to a-frame entity 
+- 'my-component': name of attribute to use to attach to a-frame entity
 - `schema`: defines how data is parsed from HTML
 - Lifecycle methods:
   - `init`: component attached, like `componentDidMount`
