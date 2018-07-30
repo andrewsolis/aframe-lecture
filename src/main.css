@@ -49,7 +49,7 @@ html:-moz-full-screen-ancestor {
 .reveal h5,
 .reveal h6 {
   margin: 0 0 20px 0;
-  color: #333;
+  color: rgb(83, 83, 83);
   font-family: "Ubuntu", Helvetica, sans-serif;
   font-weight: 500;
   line-height: 1.2;
@@ -337,7 +337,7 @@ html:-moz-full-screen-ancestor {
 [data-background-video].dark-text li,
 [data-background-video].dark-text p {
   color: #333;
-  text-shadow: 1px 1px 2px #FAFAFA;
+  text-shadow: 1px 1px 2px #666;
 }
 
 .reveal section a {
@@ -360,6 +360,7 @@ html:-moz-full-screen-ancestor {
 }
 
 .image-row div {
+  margin-top: 20px;
   align-items: center;
   display: flex;
   flex: 1;
@@ -411,20 +412,15 @@ body:not(.aframe-inspector-opened) .toggle-edit {
 }
 
 .slide__title {
+  margin-top: 15% !important;
   height: 100%;
-  width: 100%:
+  width: 100%;
 }
 
 .slide__title h1,
 .slide__title h2,
 .slide__title p {
-  padding: 15px 30px;
-}
-
-.talk-info {
-  font-weight: 200;
-  position: relative;
-  top: 160px;
+  padding: 10px 30px;
 }
 
 div.slide__boilerplate {
@@ -522,4 +518,53 @@ pre code.code-bad {
 
 .reveal iframe#helloworld {
     border: 5px solid cornflowerblue;
+}
+
+div.container
+{
+    position: relative;
+}
+
+div.image-row div img.resize-tiny
+{
+    margin: auto;
+    max-width: 100px;
+    max-height: 100px;
+}
+
+div.image-row div img.resize-small
+{
+    margin: auto;
+    max-width: 150px;
+    max-height: 150px;
+}
+
+div.image-row div img.resize-medium
+{
+    max-width: 200px;
+    max-height: 200px;
+    margin: auto;
+}
+
+div.image-row div img.consistent
+{
+    max-width: 250px;
+    height: 200px;
+    margin: auto;
+}
+
+section.center-custom
+{
+    display: block !important;
+    top: 5em !important;
+}
+
+h1.margin-custom,
+h2.margin-custom,
+h3.margin-custom,
+h4.margin-custom,
+h5.margin-custom,
+h6.margin-custom
+{
+    margin: 0px;
 }
