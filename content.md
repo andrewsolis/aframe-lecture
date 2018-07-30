@@ -2,7 +2,7 @@
 
 <div class="slide__title">
   <h1>A-Frame</h1>
-  <p>A web framework for building Virtual Experiences</p>
+  <p>A web framework for building Virtual Content</p>
   <p>
     Andrew Solis | TACC
 	<br/>
