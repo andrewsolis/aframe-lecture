@@ -1,10 +1,8 @@
-<script src="https://unpkg.com/aframe-animation-component@^4.1.2/dist/aframe-animation-component.min.js"></script>
 <a-scene embedded inspector="src/vendor/js/aframe-inspector.min.js">
     <a-entity
-        geometry="primitive: sphere; radius: 1.5"
+        geometry="primitive: cylinder; height: 2; radius: 1.5"
         material="color: #B96FD3; roughness: 0.4"
         position="-1 2 -6" rotation="45 0 90" scale="2 2 2"
-        animation="property: rotation; loop: true; to: 0 360 0"
-        movement-pattern="type: spline; speed: 4">
+        animation="property: rotation; loop: true; to: 45 360 90">
     </a-entity>
 </a-scene>

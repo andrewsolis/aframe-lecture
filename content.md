@@ -220,6 +220,56 @@ Goals of A-Frame:
 <!-- NOTES -->
 Standard markup language where you embed elements inside of each other to display
 - Example: header tag, main html tag, a header and a paragraph
+How are we able to immeiately interact with virtual interfaces?
+
+---
+
+<!-- .slide: data-background="media/img/aframe-rendered-full.png" -->
+
+<img class="stretch" data-src="media/img/webvr.png">
+
+Browser APIs that enable WebGL rendering to headsets and access to VR
+sensors
+
+https://w3c.github.io/webvr/
+
+> **API** : A set of routines, protocols, and tools for building software applications
+
+<!-- NOTES -->
+
+WebGL:
+- A JavaScript API for rendering interactive 3D and 2D graphics
+    within any compatible web browser
+
+
+API:
+- Optimized rendering path to headsets
+- Access position and rotation (pose) data
+
+History:
+- Initial WebVR API by Mozilla
+- Working W3C community group
+
+Not just a specification, it's implemented...
+---
+
+<!-- .slide: data-background="media/img/aframe-rendered-full.png" -->
+
+## A-Frame Technologies
+
+<div class="image-row">
+    <div><img class="resize-medium" data-src="media/img/webvr.png"></div>
+    <div><img class="resize-medium" data-src="media/img/three-js-logo.png"></div>
+    <div><img class="resize-medium" data-src="media/img/WebGL_Logo.svg"></div>
+</div>
+
+<!-- NOTES -->
+Core technologies used for A-Frame
+* We won't go into these in detail and will mostly be learning A-Frame, but this
+    helps give you a sense of how it works and what it takes care of
+* If you find yourself interested later on then you have the option to customize
+    any level of the pipeline as you wish
+Let's take a look at some exammples.
 ---
 
 ## Hello World
@@ -357,13 +407,13 @@ Simple scene that is able to be ran on mobile phone and headset if available
 
 ---
 
-## Composing an Entity
+## Adding appearance
 
 <!-- .slide: data-background="media/img/minecraft-blocks.png" data-transition="none" -->
 
 ```html
 <a-entity
-    geometry="primitive: sphere; radius: 1.5;"
+    geometry="primitive: cylinder; radius: 1.5; height: 2;"
     material="color: #B96FD3; roughness: 0.4">
 </a-entity>
 ```
@@ -384,7 +434,7 @@ Simple scene that is able to be ran on mobile phone and headset if available
 - units in a-frame are in meters
 ---
 
-## Composing an Entity
+## Changing appearance
 
 <!-- .slide: data-background="media/img/minecraft-blocks.png" data-transition="none" -->
 
@@ -408,17 +458,16 @@ if we'd like to rotate it and about which axes, and if we'd like to scale it
 
 ---
 
-## Composing an Entity
+## Adding Behavior
 
 <!-- .slide: data-background="media/img/minecraft-blocks.png" data-transition="none" -->
 
 ```html
 <a-entity
-    geometry="primitive: sphere; radius: 1.5"
+    geometry="primitive: cylinder; height: 2; radius: 1.5"
     material="color: #B96FD3; roughness: 0.4"
-    position="-1 2 4" rotation="45 0 90" scale="2 2 2"
-    animation="property: rotation; loop: true; to: 0 360 0"
-    movement-pattern="type: spline; speed: 4">
+    position="-1 2 -6" rotation="45 0 90" scale="2 2 2"
+    animation="property: rotation; loop: true; to: 45 360 90">
 ```
 
 <div class="stretch" data-aframe-scene="scenes/composing-entity-3.html"></div>
@@ -426,43 +475,40 @@ if we'd like to rotate it and about which axes, and if we'd like to scale it
 <!-- .element: class="stretch" -->
 
 <!-- NOTES -->
+* Here I am telling the object to perform an animation (which is rotate in this example)
+    and setting other possible paraters such as if I'd like it to loop, what the final
+    value should be after rotation, etc.
+* You can control a lot of different elements of an object and add multiple animations,
+    but this is a simple way of understanding how to create simple actions for your events
+
 What if I wanted to load a model from a file?
 
 ---
 
-## Composing an Entity
+## Loading an Object
 
 <!-- .slide: data-background="media/img/minecraft-blocks.png" data-transition="none" -->
 
 ```html
-<a-entity
-  json-model="src: #robot"
-  position="-1 2 4" rotation="45 0 90" scale="2 2 2"
-  animation="property: rotation; loop: true; to: 0 360 0"
-  movement-pattern="type: spline; speed: 4">
+    <a-assets>
+        <a-asset-item id="bb8-json" src="../materials/bb-unit-threejs/bb-unit.json"></a-asset-item>
+    </a-assets>
+    <a-entity
+        object-model= "src: #bb8-json"
+        position="0 1 -3" rotation="0 0 0" scale="0.01 0.01 0.01">
+    </a-entity>
 ```
+
+<div class="stretch" data-aframe-scene="scenes/loading-object.html"></div>
+
 <!-- .element: class="stretch" -->
 
 <!-- NOTES -->
-- 
+- I have a predefined object in a json file that I define inside an a-asset-item tag
+    (you can use this to keep track of all the assets in your scene)
+- I reference my object file later to load, and change some parameters of it
+
 What about having my object perform some action?
----
-
-## Composing an Entity
-
-<!-- .slide: data-background="media/img/minecraft-blocks.png" data-transition="none" -->
-
-```html
-<a-entity
-  json-model="src: #robot"
-  position="-1 2 4" rotation="45 0 90" scale="2 2 2"
-  animation="property: rotation; loop: true; to: 0 360 0"
-  movement-pattern="type: attack; target: #player"
-  explode="on: hit">
-```
-<!-- .element: class="stretch" -->
-
-<!-- NOTES -->
 How could I write my own component?
 
 ---
@@ -535,16 +581,6 @@ Curated collection of A-Frame components.
 - Collecting them into the A-Frame registry
 - Like a store of components that we make sure work well
 - People can browse and search for components or install them....
-
----
-
-# Registry
-
-<!-- .slide: data-background-color="#333" -->
-
-Curated collection of A-Frame components.
-
-<video loop data-src="media/video/leaphands.mp4" data-autoplay></video>
 
 ---
 
