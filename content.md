@@ -1,8 +1,8 @@
 <!-- .slide: data-background="media/img/TACC_Slide.png" class="dark-text center" -->
 
 <div class="slide__title">
-  <h1>A-Frame</h1>
-  <p>A web framework for building Virtual Content</p>
+  <h1>Emerging Technologies: An Overview</h1>
+  <p>A-Frame: A web framework for building Virtual Content</p>
   <p>
     Andrew Solis | TACC
 	<br/>
