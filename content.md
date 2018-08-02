@@ -183,7 +183,23 @@ Software Ecosystem
     I am familiar with
 - Depending on what you are doing can affect your choices for software
     and systems.
-- Let's take a look exactly at what A-frame is and how it works...
+
+---
+
+<!-- .slide: data-background="media/img/TACC_Slide.png" class="dark-text center-custom" -->
+
+<h5>
+Virtual Data: Selecting your technology
+</h5>
+* What is my data? (triangles, mesh, point)
+* how big is my data?
+* Is there current support for my data?
+* How can this help tell a story?
+* How can it help others find new discoveries?
+
+<!-- NOTES -->
+- While the ability for users to create virtual content is more available there is much that is needed
+    to support the notion that a platform like this supports their purposes
 ------
 
 # A-Frame
@@ -200,6 +216,7 @@ Goals of A-Frame:
   - Vehicle to kickstart WebVR ecosystem
   - Started as a technology for VR experiences but now changing to support
     all types of virtual content
+    
 
 ---
 
